@@ -14,23 +14,22 @@
  * limitations under the License.
  */
  
- 
 name := "upickle-test"
 
 organization := "com.github.dnvriend"
 
-version := "1.0.0"
+version := "1.0.0-SNAPSHOT"
 
 resolvers += Resolver.typesafeRepo("releases")
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.10.6"
 
-libraryDependencies ++= Seq(
-	"com.lihaoyi" %% "upickle" % "0.4.0",
-	"com.lihaoyi" %% "utest" % "0.4.3" % Test
-)
+libraryDependencies += "com.lihaoyi" %% "upickle" % "0.4.3"
+  libraryDependencies += "org.scalamacros" %% "quasiquotes" % "2.0.0" % "provided"
+libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.7"
 
-testFrameworks += new TestFramework("utest.runner.Framework")
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % Test
+libraryDependencies += "org.typelevel" %% "scalaz-scalatest" % "1.1.1" % Test
 
 licenses +=("Apache-2.0", url("http://opensource.org/licenses/apache2.0.php"))
 
@@ -43,7 +42,6 @@ SbtScalariform.autoImport.scalariformPreferences := SbtScalariform.autoImport.sc
   .setPreference(AlignSingleLineCaseStatements, true)
   .setPreference(AlignSingleLineCaseStatements.MaxArrowIndent, 100)
   .setPreference(DoubleIndentClassDeclaration, true)
-  .setPreference(RewriteArrowSymbols, true)
 
 // enable updating file headers //
 import de.heikoseeberger.sbtheader.license.Apache2_0
