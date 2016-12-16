@@ -1,4 +1,4 @@
-package com.github.dnvriend.overview
+package com.github.dnvriend.pickle.overview
 
 import com.github.dnvriend._
 import org.typelevel.scalatest.DisjunctionMatchers
@@ -94,7 +94,7 @@ class UPickleTest extends TestSpec with DisjunctionMatchers {
 
   "SealedTraits" should "serialize" in {
     write(OrderItem("foos", Size.SMALL)) shouldBe
-      """{"item":"foos","size":{"$type":"com.github.dnvriend.overview.Size.SMALL"}}"""
+      """{"item":"foos","size":{"$type":"com.github.dnvriend.pickle.overview.Size.SMALL"}}"""
   }
 
   "Reading stuff" should "" in {

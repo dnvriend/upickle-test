@@ -1,4 +1,4 @@
-package com.github.dnvriend.deserialization
+package com.github.dnvriend.pickle.deserialization
 
 import com.github.dnvriend.TestSpec
 import org.typelevel.scalatest.DisjunctionMatchers
