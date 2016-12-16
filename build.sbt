@@ -20,7 +20,6 @@ organization := "com.github.dnvriend"
 
 version := "1.0.0-SNAPSHOT"
 
-resolvers += Resolver.typesafeRepo("releases")
 scalaVersion := "2.10.6"
 
 libraryDependencies += "com.lihaoyi" %% "upickle" % "0.4.3"
@@ -30,9 +29,12 @@ libraryDependencies += "com.typesafe.play" %% "play-json" % "2.4.8"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % Test
 libraryDependencies += "org.typelevel" %% "scalaz-scalatest" % "1.1.1" % Test
 
-licenses +=("Apache-2.0", url("http://opensource.org/licenses/apache2.0.php"))
-
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
+
+resolvers += Resolver.typesafeRepo("releases")
+resolvers += Resolver.sonatypeRepo("releases")
+
+licenses +=("Apache-2.0", url("http://opensource.org/licenses/apache2.0.php"))
 
 // enable scala code formatting //
 import scalariform.formatter.preferences._
